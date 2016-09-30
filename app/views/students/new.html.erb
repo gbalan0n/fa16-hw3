@@ -1,0 +1,26 @@
+<form action="/students" method="POST">
+  <label>Full Name</label>
+  <input
+    name="full_name"
+    type="text"
+    placeholder=<%= @placeholder_name %>
+    type="text"
+    </input>
+
+  <label>Favorite Course Name</label>
+  <input
+    name="course"
+    placeholder=<%= @placeholder_course %>
+    type="text"
+  >
+  </input>
+  <label>Current Grade level</label>
+  <input
+    name="grade_level"
+    type="text"
+    placeholder=<%= @placeholder_grade %>
+    type="text"
+  </input>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <button type="submit">Create Student Profile</button>
+</form>
